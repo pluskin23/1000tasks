@@ -54,12 +54,13 @@ int v_of_parallelepiped(int a, int b, int c) {
 
 //task 6.2
 int square_of_parallelepiped(int a, int b, int c) {
-	return 2 * (a * b + b * c + a * c);
+	return 2 * (a * b + b * c + a * c);	
 }
 
 //task 6
-void parallelepiped(int a, int b, int c) {
-	std::cout << v_of_parallelepiped(a, b, c) << square_of_parallelepiped(a, b, c);
+int parallelepiped(int a, int b, int c) {
+	std::cout << v_of_parallelepiped(a, b, c) << "\t" << square_of_parallelepiped(a, b, c);
+	return 0;
 }
 
 //task 7.1 
@@ -332,8 +333,8 @@ int square_of_point_triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
 
 //task 21
 int pointTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-	
-	std::cout << perimeter_of_point_triangle(x1, y1, x2, y2, x2, y3) << square_of_point_triangle(x1, y1, x2, y2, x3, y3);
+	std::cout << perimeter_of_point_triangle(x1, y1, x2, y2, x3, y3) << square_of_point_triangle(x1, y1, x2, y2, x3, y3);
+	return 0;
 }
 
 //task 22
