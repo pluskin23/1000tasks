@@ -304,8 +304,18 @@ int pointLength(int x1, int x2, int y1, int y2) {
 	}
 	double xy1 = x1 + y1;
 	double xy2 = x2 + y2;
-	double ans = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-	return ans;
+	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+} 
+
+//task 21.1
+int perimeter_of_point_triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+	if (x1 > x2 && y1 > y2 && x1 > x3 && y1 > y3) {
+		std::cout << "x2 and y2 and x3 and y3 must be > x1 and y1";
+	}
+	double a = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+	double b = sqrt(pow(x2 - x3, 2) + pow(y2 - y3, 2));
+	double c = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+	return a + b + c;
 }
 
 //task 21
