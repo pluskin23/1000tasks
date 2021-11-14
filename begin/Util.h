@@ -318,18 +318,22 @@ int perimeter_of_point_triangle(int x1, int y1, int x2, int y2, int x3, int y3) 
 	return a + b + c;
 }
 
-//task 21
-int pointTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+//task 21.2
+int square_of_point_triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
 	if (x1 > x2 && y1 > y2 && x1 > x3 && y1 > y3) {
 		std::cout << "x2 and y2 and x3 and y3 must be > x1 and y1";
 	}
 	double a = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 	double b = sqrt(pow(x2 - x3, 2) + pow(y2 - y3, 2));
 	double c = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
-	double P = a + b + c;
-	double p = (a + b + c) / 2;
-	double S = sqrt(p * (p - a) * (p - b) * (p - c));
-	return P, S;
+	double half_perimeter = (a + b + c) / 2;
+	return sqrt(half_perimeter * (half_perimeter - a) * (half_perimeter - b) * (half_perimeter - c));
+}
+
+//task 21
+int pointTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+	
+	std::cout << perimeter_of_point_triangle(x1, y1, x2, y2, x2, y3) << square_of_point_triangle(x1, y1, x2, y2, x3, y3);
 }
 
 //task 22
